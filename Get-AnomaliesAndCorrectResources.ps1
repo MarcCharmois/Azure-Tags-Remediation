@@ -1,18 +1,18 @@
 ﻿#-----------------------------------------------
 
-#This script generate 2 files: 
+#This script generates 2 .csv files: 
 
-#One is listing all the anomalies for a tag called XXX (one line for resource with missing tag, wrong tag, ect.)
+#One .csv file is listing all the anomalies for a tag called XXX (one line for resource with missing tag, wrong tag, ect.)
 #we asume that the tag value is a JSON string and that the JSON has to be valid and has to correspond to the company rules
-#(all attributes present, allt the attribute values compliant with company rules)
+#(all attributes present, all the attributes values compliant with company rules)
 
 #for each anomaly will tell what to do. Action will be specify in the "Mode" column of the .csv file: 
-    #"create" tells the remediation script to create a tag
+    #"create" tells the remediation script to create a tag 
     #"format" tells the remdiation script to format the tag
-    #"Investigate" tells the script to do nothing and warn the user that there is not enough information 
+    #"Investigate" tells the script to do nothing and warns the user that there is not enough information 
     #to create a tag or format an existing one
 
-#The other one is listing correct resources, (one line for one resource with all required tags and well formatted tags)
+#The other .cv file is listing correct resources, (one line for one resource with all required tags and well formatted tags)
 
 #To remediate the tags, you need first to generate the .csv of the anomalies with this script
 #then execute the remediation script with the anomalies .csv file as an input
